@@ -1,0 +1,19 @@
+@use "mixins" as m;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    height: 100%;
+}
+
+body {
+    @include m.sticky-footer ;
+    font-family: 'Rubik' , sans-serif;
+}
+main {
+    flex-grow: 1;
+}

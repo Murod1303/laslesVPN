@@ -1,0 +1,99 @@
+@use "../mixins" as m;
+
+.hero {
+    padding-top: 180px;
+    padding-bottom: 95px;
+    background-image: url(../../images/herobg.png);
+    background-size: 612px 383px;
+    background-repeat: no-repeat;
+    background-position: top 180px right calc(50% - 330px);
+}
+.hero__content {
+    max-width: 555px;
+    width: 100%;
+    margin-bottom: 103px;
+}
+.hero__title {
+    @include m.title ;
+    margin-bottom: 20px;
+    color: #0B132A;
+    font-size: 50px;
+    line-height: 70px;
+}
+.hero__desc {
+    @include m.description ;
+    margin-bottom: 50px;
+    color: #4f5665;
+}
+
+.hero__link {
+    position: relative;    
+    @include m.link-btn ;
+    width: 250px;
+    padding: 18px;
+    border-radius: 10px;
+    margin-left: 0;
+}
+.hero__link:hover {
+    @include m.button-link ;
+    line-height: normal;
+    font-weight: 700;
+    box-shadow: 0px 0px 16px 8px rgba(245,56,56,0.35);
+    -webkit-box-shadow: 0px 0px 16px 8px rgba(245,56,56,0.35);
+    -moz-box-shadow: 0px 0px 16px 8px rgba(245,56,56,0.35);
+}
+.hero__static-wrapper {
+    border-radius: 10px;
+    box-shadow: 0px 5px 57px 1px rgba(13,16,37,0.05);
+    -webkit-box-shadow: 0px 23px 57px 1px rgba(13,16,37,0.05);
+    -moz-box-shadow: 0px 23px 57px 1px rgba(13,16,37,0.05);
+}
+.hero__wrapper2 {
+    @include m.flexbox (flex, center, space-between) ;
+    padding: 66px 91px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.hero__item {
+    @include m.flexbox (flex, center,space-between)  
+}
+.hero__item:first-child:before {
+    content: "";
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    margin-right: 36.5px;
+    background-image: url(../../images/Icon/user.svg);
+}
+.hero__item:first-child::after {
+    content: "";
+    width: 1px;
+    height: 126px;
+    display: block;
+    margin-left: 130px;
+    background-color: #eeeff2;
+}
+.hero__item:nth-child(2)::before {
+    content: "";
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    margin-right: 36.5px;
+    background-image: url(../../images/Icon/location.svg);
+}
+.hero__item:nth-child(2)::after {
+    content: "";
+    width: 1px;
+    height: 126px;
+    display: block;
+    margin-left: 130px;
+    background-color: #eeeff2;
+}
+.hero__item:last-child:before {
+    content: "";
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    margin-right: 36.5px;
+    background-image: url(../../images/Icon/Server.svg);
+}

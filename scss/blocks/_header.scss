@@ -1,0 +1,59 @@
+@use "../mixins" as m;
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding-top: 46px;
+    padding-bottom: 23px;
+    background-color: #fff
+}
+
+.site-header__wrapper {
+    @include m.flexbox (flex, center, space-between) ;
+}
+.navbar {
+    @include m.flexbox (flex, center, space-between) ;
+}   
+.navbar__list {
+    @include m.flexbox (flex, center, space-between);
+    margin-right: 150px; 
+}
+.navbar__item:not(:last-child) {
+    margin-right: 40px;
+}
+.navbar__link {
+    @include m.linkstyle ;
+}
+.navbar__link:hover {
+    @include m.link-hover ;
+}
+.navbar__list2 {
+    @include m.flexbox (flex, center, space-between) ;
+}
+.navbar__item2:not(:last-child) {
+    margin-right: 30px;
+}
+.navbar__link2 {
+    @include m.linkstyle ;
+    font-weight: 500;
+    color: #0b132a;
+}
+.navabr__signup {
+    display: block;
+    width: 150px;
+    padding: 13px;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid #f53855;
+    color: #f53855;
+    transition: color 0.3s ease-in-out , background-color 0.3s ease-in-out;
+}
+.navabr__signup:hover {
+    @include m.link-btn-hover ;
+    box-shadow: 0px 0px 16px 8px rgba(245,56,56,0.35);
+    -webkit-box-shadow: 0px 0px 16px 8px rgba(245,56,56,0.35);
+    -moz-box-shadow: 0px 0px 16px 8px rgba(245,56,56,0.35);
+}

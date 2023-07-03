@@ -1,0 +1,46 @@
+@use "../mixins" as m ;
+.chance {
+    padding-top: 54px;
+    padding-bottom:127px;
+    background-image: url(../../images/chancebg.png);
+    background-repeat: no-repeat;
+    background-size: 508px 415px;
+    background-position: top left calc(50% - 283px);
+}
+.chance__content {
+    max-width: 428px;
+    width: 100%;
+    margin-left: auto;
+}
+.chance__title-box {
+    max-width: 383px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.chance__title {
+    @include m.title ;
+    line-height: 50px;
+    font-size: 35px;
+}
+.chance__desc {
+    @include m.description ;
+    margin-bottom: 20px;
+}
+.chance__item {
+    @include m.description ;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.chance__item:not(:last-child) {
+    margin-bottom: 15px;
+}
+.chance__item::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url(../../images/galochka.png);
+    background-position: center;
+}

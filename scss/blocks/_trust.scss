@@ -1,0 +1,171 @@
+@use "../mixins" as m;
+.trust {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 300px;
+}
+.trust__box-title {
+    max-width: 448px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.trust__title {
+    @include m.title ;
+    font-size: 35px;
+    line-height: 50px;
+}
+.trust__desc-box {
+    max-width: 555px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.trust__list {
+    display: flex;
+    align-items: stretch;
+    column-gap: 50px;
+}
+.trust__item {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: border 0.3s ease-in-out;
+}
+.trust__item:hover {
+    border: 2px solid #f53838;
+}
+.trust__pername {
+    @include m.flexbox (flex, center, space-between);
+    margin-bottom: 20px;
+}
+.trust__pername-name-f {
+    @include m.flexbox (flex, center,$space:null)
+}
+.trust__pername-name-f--f::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 20px;
+    background-image: url(../../images/first.png);
+}
+.trust__pername-name-f--s::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 20px;
+    background-image: url(../../images/second.png);
+}
+.trust__pername-name-f--t::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 20px;
+    background-image: url(../../images/thrid.png);
+}
+.trust__pername-name {
+    display: flex;
+    flex-direction: column;
+}
+.trust__name {
+    color: #0b132a;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.trust__loc {
+    color: #4F5665;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.trust__rate {
+    @include m.description ;
+    color: #0b132a;
+}
+.trust__rate::after {
+    content: "" ;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-left: 10px;
+    background-image: url(../../images/star.svg)
+}
+.trust__item-desc-box {
+    width: 340px;
+}
+.trust__item-desc {
+    @include m.description ;
+    color: #0b132a;
+}
+// subscribe started 
+.subscribe {
+    @include m.flexbox (flex, center, space-between) ;
+    position: absolute;
+    left: calc(50% - 570px);
+    top: calc(100% - 130px);
+    width: 1140px;
+    padding: 58.5px 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 57px 1px rgba(13,16,37,0.05);
+    -webkit-box-shadow: 0px 23px 57px 1px rgba(13,16,37,0.05);
+    -moz-box-shadow: 0px 23px 57px 1px rgba(13,16,37,0.05);
+}
+.subscribe__content {
+    max-width: 372px; 
+    width: 100%;
+}
+.subscribe__title {
+    @include m.title ;
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 45px;
+}
+.subscribe__desc {
+    @include m.description ;
+}
+.subscribe__link {
+    @include m.link-btn;
+    margin-right: 0;
+    width: 250px;
+    padding: 17.5px;
+    border-radius: 10px;
+}
+.subscribe__link:hover {
+    background-color: #f53838;
+    color: #fff;
+    box-shadow: 0px 17px 27px 6px rgba(245,56,56,0.35);
+    -webkit-box-shadow: 0px 17px 27px 6px rgba(245,56,56,0.35);
+    -moz-box-shadow: 0px 17px 27px 6px rgba(245,56,56,0.35);
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
